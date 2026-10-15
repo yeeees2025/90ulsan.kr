@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#000B8C">
+<title>사전 신청 완료 | 90일 울산</title>
+<link rel="icon" href="/favicon.ico">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1074575572082703');
+fbq('track', 'PageView');
+// 신청 완료: 새로고침해도 한 번만 기록
+(function(){
+  var key = 'cr_done_90ulsan';
+  var done = false;
+  try { done = sessionStorage.getItem(key) === '1'; } catch(e) {}
+  if (!done) {
+    fbq('track', 'CompleteRegistration', {content_name: '2기 사전 신청'});
+    try { sessionStorage.setItem(key, '1'); } catch(e) {}
+  }
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1074575572082703&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+  :root{
+    --navy:#000B8C; --orange:#FF8A00; --ink:#191F28;
+    --g1:#4E5968; --g2:#8B95A1; --line:#E5E8EB; --bg:#FFFFFF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg)}
+  body{
+    font-family:"Goorm Sans","Pretendard",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    color:var(--ink); word-break:keep-all; -webkit-font-smoothing:antialiased;
+    min-height:100vh; display:flex; justify-content:center;
+  }
+  main{width:100%; max-width:480px; padding:72px 24px 48px; display:flex; flex-direction:column; min-height:100vh}
+  .check{
+    width:56px;height:56px;border-radius:50%;background:var(--navy);
+    display:flex;align-items:center;justify-content:center;margin-bottom:28px
+  }
+  .label{font-size:14px;color:var(--g2);margin-bottom:10px}
+  h1{font-size:28px;line-height:1.35;font-weight:400;letter-spacing:-0.03em}
+  h1 b{font-weight:700;color:var(--navy)}
+  .lead{margin-top:16px;font-size:16px;line-height:1.6;color:var(--g1)}
+  .steps{margin-top:36px;border-top:1px solid var(--line)}
+  .step{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+  .num{font-size:14px;color:var(--g2);width:20px;flex-shrink:0;padding-top:2px}
+  .step.now .num{color:var(--orange);font-weight:700}
+  .step h2{font-size:16px;font-weight:700;margin-bottom:4px}
+  .step p{font-size:14px;line-height:1.55;color:var(--g1)}
+  .step em{font-style:normal;color:var(--orange);font-weight:700}
+  .note{margin-top:20px;font-size:13px;line-height:1.6;color:var(--g2)}
+  .spacer{flex:1;min-height:40px}
+  .btn{
+    display:block;text-align:center;text-decoration:none;
+    background:var(--navy);color:#fff;font-size:16px;font-weight:700;
+    padding:17px 0;border-radius:14px
+  }
+  .sub{display:block;text-align:center;margin-top:16px;font-size:14px;color:var(--g1);text-decoration:none}
+</style>
+</head>
+<body>
+<main>
+  <div class="check" aria-hidden="true">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+  </div>
+  <p class="label">부울경 청년 창업부트캠프 2기</p>
+  <h1>사전 신청이<br><b>완료됐어요</b></h1>
+  <p class="lead">남겨주신 메일로 본 지원서를 보내드릴게요.</p>
+
+  <section class="steps">
+    <div class="step">
+      <span class="num">01</span>
+      <div><h2>사전 신청</h2><p>완료</p></div>
+    </div>
+    <div class="step now">
+      <span class="num">02</span>
+      <div><h2>본 지원서 작성</h2><p>메일로 받은 지원서를 <em>11.14(토)까지</em> 제출해 주세요. 30분 정도 걸려요.</p></div>
+    </div>
+    <div class="step">
+      <span class="num">03</span>
+      <div><h2>선발</h2><p>11.16 서류 발표 · 11.17–18 인터뷰 · 11.19 최종 발표</p></div>
+    </div>
+  </section>
+
+  <p class="note">메일이 안 보이면 스팸함도 확인해 주세요.</p>
+
+  <div class="spacer"></div>
+  <a class="btn" href="https://www.instagram.com/90ulsan.kr/">인스타그램 @90ulsan.kr 팔로우</a>
+  <a class="sub" href="/">90일 울산 홈으로 →</a>
+</main>
+</body>
+</html>
