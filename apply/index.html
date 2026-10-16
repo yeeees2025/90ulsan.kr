@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#FFFFFF">
+<title>사전 신청 | 90일 울산</title>
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://embed.typeform.com/next/css/widget.css">
+
+<!-- Meta Pixel Code (PageView만 — 등록 완료는 /thanks 에서) -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1074575572082703');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1074575572082703&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+  @font-face{font-family:Goorm;src:url(/assets/fonts/goorm-400.woff2) format('woff2');font-weight:400;font-display:swap}
+  @font-face{font-family:Goorm;src:url(/assets/fonts/goorm-700.woff2) format('woff2');font-weight:700;font-display:swap}
+  :root{--navy:#000B8C;--ink:#191F28;--g1:#4E5968;--g2:#8B95A1;--line:#E5E8EB;--hd:52px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;background:#fff}
+  body{font-family:Goorm,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;min-height:100vh;min-height:100dvh}
+  header{flex:none;height:calc(var(--hd) + env(safe-area-inset-top,0px));padding:env(safe-area-inset-top,0px) 16px 0;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);background:#fff}
+  header .logo{display:block;flex:none}
+  header .logo img{display:block;height:24px;width:auto}
+  header .home{font-size:13px;color:var(--g1);text-decoration:none;white-space:nowrap}
+  header .home:hover{color:var(--navy)}
+  header .fallback{margin-left:auto;font-size:12px;color:var(--g2);text-align:right;line-height:1.3;text-decoration:underline;text-underline-offset:2px}
+  #tf{flex:1;position:relative;min-height:0;height:calc(100vh - var(--hd) - env(safe-area-inset-top,0px));height:calc(100dvh - var(--hd) - env(safe-area-inset-top,0px))}
+  #tf > div,#tf iframe{width:100%!important;height:100%!important;border:0}
+  .loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--g2);pointer-events:none}
+  @media (max-width:420px){header .home{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="/" aria-label="90일 울산 홈으로"><img src="/assets/img/logo.webp" alt="90일 울산"></a>
+  <a class="home" href="/">← 홈으로</a>
+  <a class="fallback" id="fallback" href="https://form.typeform.com/to/xKP8suXq">신청서가 안 보이면 여기를 눌러주세요</a>
+</header>
+<main id="tf"><p class="loading" id="loading">신청서를 불러오는 중…</p></main>
+
+<script src="https://embed.typeform.com/next/embed.js"></script>
+<script>
+(function(){
+  var FORM='xKP8suXq', PARAMS=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid'];
+  // 랜딩에서 넘어온 UTM (주소 → 없으면 세션에 저장된 값)
+  var q={};try{var sp=new URLSearchParams(location.search);PARAMS.forEach(function(k){var v=sp.get(k);if(!v){try{v=sessionStorage.getItem('sb_'+k)}catch(e){}}if(v)q[k]=v})}catch(e){}
+  // 대체 링크에도 UTM 붙이기
+  try{var fb=new URL(document.getElementById('fallback').href);for(var k in q)fb.searchParams.set(k,q[k]);document.getElementById('fallback').href=fb.toString()}catch(e){}
+  if(!window.tf||!window.tf.createWidget){document.getElementById('loading').textContent='신청서를 불러오지 못했어요. 오른쪽 위 링크를 눌러주세요.';return}
+  window.tf.createWidget(FORM,{
+    container:document.getElementById('tf'),
+    hidden:q,
+    inlineOnMobile:true,
+    iframeProps:{title:'90일 울산 2기 사전 신청서'},
+    onReady:function(){var l=document.getElementById('loading');if(l)l.remove()},
+    onStarted:function(){try{sessionStorage.setItem('tf_started_90ulsan','1')}catch(e){}},
+    onSubmit:function(){location.href='/thanks/?done=1'}
+  });
+})();
+</script>
+</body>
+</html>

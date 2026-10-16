@@ -20,8 +20,21 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1074575572082703');
 fbq('track', 'PageView');
-// 신청 완료: 새로고침해도 한 번만 기록
+// 신청 완료: 신청서 제출 직후(/thanks/?done=1)에만 기록. 주소로 직접 들어오면 기록 안 함
+// 새로고침·뒤로가기로 다시 와도 한 번만 기록되고, 기록 뒤 주소에서 done=1을 지움
 (function(){
+  // 인정하는 경우: ① 사이트 안 신청서 제출(done=1) ② 타입폼 쪽 '제출 후 이동' 설정으로 온 경우
+  //   (타입폼 페이지에서 왔거나, /apply 에서 신청서를 작성하다 넘어온 경우). 주소 직접 입력은 제외
+  var ok = false, ref = null, started = false;
+  try { ok = new URLSearchParams(location.search).get('done') === '1'; } catch(e) {}
+  try { ref = document.referrer ? new URL(document.referrer) : null; } catch(e) {}
+  try { started = sessionStorage.getItem('tf_started_90ulsan') === '1'; } catch(e) {}
+  if (!ok && ref) {
+    if (/(^|\.)typeform\.com$/.test(ref.hostname)) ok = true;
+    else if (ref.hostname === location.hostname && /^\/apply/.test(ref.pathname) && started) ok = true;
+  }
+  if (!ok) return;
+  try { sessionStorage.removeItem('tf_started_90ulsan'); } catch(e) {}
   var key = 'cr_done_90ulsan';
   var done = false;
   try { done = sessionStorage.getItem(key) === '1'; } catch(e) {}
@@ -29,6 +42,7 @@ fbq('track', 'PageView');
     fbq('track', 'CompleteRegistration', {content_name: '2기 사전 신청'});
     try { sessionStorage.setItem(key, '1'); } catch(e) {}
   }
+  try { history.replaceState(null, '', location.pathname); } catch(e) {}
 })();
 </script>
 <noscript><img height="1" width="1" style="display:none"
