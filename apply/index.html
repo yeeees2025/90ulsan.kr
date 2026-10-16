@@ -70,6 +70,7 @@ src="https://www.facebook.com/tr?id=1074575572082703&ev=PageView&noscript=1"
     inlineOnMobile:true,
     iframeProps:{title:'90일 울산 2기 사전 신청서'},
     onReady:function(){var l=document.getElementById('loading');if(l)l.remove()},
+    onStarted:function(){try{sessionStorage.setItem('tf_started_90ulsan','1')}catch(e){}},
     onSubmit:function(){location.href='/thanks/?done=1'}
   });
 })();
