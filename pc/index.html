@@ -1171,7 +1171,7 @@ function kd(y,m,d){var k=new Date(Date.now()+324e5);return Math.round((Date.UTC(
 try{var d=kd(2026,11,14);$$('.js-dd').forEach(function(e){e.textContent=d>0?'D-'+d:(d===0?'D-DAY':'마감')})}catch(e){}
 function tick(){var t=Math.max(0,END-new Date()),s=Math.floor(t/1e3);$('#cd').textContent=Math.floor(s/86400);$('#ch').textContent=p2(Math.floor(s%86400/3600));$('#cm').textContent=p2(Math.floor(s%3600/60));$('#cs').textContent=p2(s%60)}tick();setInterval(tick,1000);
 /* 밋업: 7일 전부터 초 단위 카운트다운 */
-function mt(){var r=Math.max(0,MEET-new Date()),x=Math.floor(r/1e3),dd=kd(2026,11,5);if(r>7*864e5){$('#tkdd').hidden=false;$('#tkcd').hidden=true;$('#lvdd').textContent='D-'+dd;return}$('#tkdd').hidden=true;$('#tkcd').hidden=false;$('#ld').textContent=Math.floor(x/86400);$('#lh').textContent=p2(Math.floor(x%86400/3600));$('#lm').textContent=p2(Math.floor(x%3600/60));$('#ls').textContent=p2(x%60)}mt();setInterval(mt,1000);
+function mt(){var r=Math.max(0,MEET-new Date()),x=Math.floor(r/1e3),dd=kd(2026,11,9);if(r>7*864e5){$('#tkdd').hidden=false;$('#tkcd').hidden=true;$('#lvdd').textContent='D-'+dd;return}$('#tkdd').hidden=true;$('#tkcd').hidden=false;$('#ld').textContent=Math.floor(x/86400);$('#lh').textContent=p2(Math.floor(x%86400/3600));$('#lm').textContent=p2(Math.floor(x%3600/60));$('#ls').textContent=p2(x%60)}mt();setInterval(mt,1000);
 /* 상단 바: 스크롤 시 배경 + 현재 섹션 표시 */
 var top=$('#top'),navs=$$('.top nav a');
 function onScroll(){top.classList.toggle('sc',scrollY>10);var y=scrollY+140,cur=null;navs.forEach(function(a){var t=$(a.getAttribute('href'));if(t&&t.offsetTop<=y)cur=a});navs.forEach(function(a){a.classList.toggle('on',a===cur)})}
